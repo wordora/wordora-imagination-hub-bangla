@@ -1,8 +1,5 @@
+// script.js
 function toggleMenu() {
-    let nav = document.querySelector("nav ul");
-    if (nav.style.display === "block") {
-        nav.style.display = "none";
-    } else {
-        nav.style.display = "block";
-    }
+    const menu = document.querySelector('nav ul.menu');
+    menu.classList.toggle('show');
 }
