@@ -1,24 +1,15 @@
-document.addEventListener("DOMContentLoaded", function () { 
-    let hamburger = document.getElementById("hamburgerMenu");
-    let dropdown = document.getElementById("dropdownMenu");
+function toggleMenu() {
+    let menu = document.getElementById("menu");
+    if (menu.classList.contains("hidden")) {
+        menu.classList.remove("hidden");
+    } else {
+        menu.classList.add("hidden");
+    }
+}
 
-    // ☰ Click Opens & Closes Dropdown
-    hamburger.addEventListener("click", function (event) {
-        event.stopPropagation();
-        dropdown.classList.toggle("show");
-    });
-
-    // Clicking Outside Closes ☰ Menu
-    document.addEventListener("click", function (event) {
-        if (!dropdown.contains(event.target) && !hamburger.contains(event.target)) {
-            dropdown.classList.remove("show");
-        }
-    });
-
-    // Close menu on window resize to ensure proper state
-    window.addEventListener("resize", function () {
-        if (window.innerWidth > 768) {
-            dropdown.classList.remove("show");
-        }
-    });
+document.addEventListener("DOMContentLoaded", function () {
+    let menuToggle = document.querySelector(".menu-toggle");
+    if (menuToggle) {
+        menuToggle.style.display = "block";
+    }
 });
