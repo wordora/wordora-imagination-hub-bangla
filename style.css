@@ -1,40 +1,55 @@
-/* style.css */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e8f5e9;
-    color: #2e7d32;
+    background-color: #eaf7e4;
+    text-align: center;
+}
+
+header {
+    background-color: #165b33;
+    color: white;
+    padding: 10px 0;
 }
 
 nav {
-    background-color: #4caf50;
-    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
 }
 
-.hamburger {
+.menu-toggle {
     font-size: 24px;
     cursor: pointer;
-    color: white;
-}
-
-.dropdown {
     display: none;
-    list-style: none;
+}
+
+ul {
+    list-style-type: none;
     padding: 0;
-    background-color: #66bb6a;
+    display: flex;
+    gap: 20px;
 }
 
-.dropdown.show {
-    display: block;
+ul.hidden {
+    display: none;
 }
 
-.dropdown li {
-    padding: 10px;
-    border-bottom: 1px solid white;
-}
-
-.dropdown li a {
+li a {
     color: white;
     text-decoration: none;
+}
+
+main {
+    padding: 50px;
+}
+
+footer {
+    background-color: #165b33;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
