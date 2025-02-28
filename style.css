@@ -7,76 +7,34 @@ body {
     color: #2e7d32;
 }
 
-header {
-    background-color: #1b5e20;
-    color: white;
-    padding: 15px;
-    text-align: center;
-}
-
 nav {
-    position: relative;
+    background-color: #4caf50;
+    padding: 10px;
 }
 
-nav ul.menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    background-color: #1b5e20;
-}
-
-nav ul.menu li {
-    margin: 0 15px;
-}
-
-nav ul.menu li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav .hamburger {
-    display: none;
+.hamburger {
     font-size: 24px;
     cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 20px;
     color: white;
 }
 
-main {
-    padding: 20px;
-    text-align: center;
+.dropdown {
+    display: none;
+    list-style: none;
+    padding: 0;
+    background-color: #66bb6a;
 }
 
-footer {
-    background-color: #1b5e20;
-    color: white;
-    text-align: center;
+.dropdown.show {
+    display: block;
+}
+
+.dropdown li {
     padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    border-bottom: 1px solid white;
 }
 
-/* ছোট ডিভাইসের জন্য স্টাইল */
-@media (max-width: 768px) {
-    nav ul.menu {
-        display: none;
-        flex-direction: column;
-        background-color: #1b5e20;
-        position: absolute;
-        width: 100%;
-        top: 60px;
-        left: 0;
-    }
-    nav ul.menu.show {
-        display: flex;
-    }
-    nav .hamburger {
-        display: block;
-    }
+.dropdown li a {
+    color: white;
+    text-decoration: none;
 }
