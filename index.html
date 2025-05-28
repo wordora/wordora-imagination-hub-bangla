@@ -5,28 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imagination Hub</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-            <ul id="menu" class="hidden">
-                <li><a href="#">হোম</a></li>
-                <li><a href="#">আমাদের সম্পর্কে</a></li>
-                <li><a href="#">যোগাযোগ</a></li>
-            </ul>
-        </nav>
         <h1>Imagination Hub</h1>
+        <nav class="navbar">
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="paragraphs.html">অনুচ্ছেদ</a></li>
+                <li><a href="emails.html">ই-মেইল</a></li>
+                <li><a href="compositions.html">রচনা</a></li>
+                <li><a href="dialogues.html">সংলাপ</a></li>
+                <li><a href="about-me.html">About Me</a></li>
+            </ul>
+            <div class="hamburger" id="hamburgerMenu">&#9776;</div>
+        </nav>
+        <ul class="dropdown-menu" id="dropdownMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="paragraphs.html">অনুচ্ছেদ</a></li>
+            <li><a href="emails.html">ই-মেইল</a></li>
+            <li><a href="compositions.html">রচনা</a></li>
+            <li><a href="dialogues.html">সংলাপ</a></li>
+            <li><a href="about-me.html">About Me</a></li>
+            <li><a href="letters.html">পত্র</a></li>
+            <li><a href="applications.html">আবেদন</a></li>
+            <li><a href="mixed-stories.html">মিশ্র গল্প</a></li>
+            <li><a href="kids-stories.html">শিশুদের গল্প</a></li>
+            <li><a href="imagine-story.html">কল্পনার গল্প</a></li>
+            <li><a href="completing-stories.html">অসম্পূর্ণ গল্প</a></li>
+            <li><a href="for-friends.html">বন্ধুদের জন্য</a></li>
+        </ul>
     </header>
     <main>
-        <section>
-            <h2>স্বাগতম Imagination Hub-এ</h2>
-            <p>আপনার সৃজনশীল লেখাগুলি এবং গল্প বানানোর স্থান।</p>
-        </section>
+        <h2>স্বাগতম Imagination Hub-এ</h2>
+        <p>আপনার সৃজনশীল লেখালেখির এবং গল্প লেখার জায়গা!</p>
     </main>
     <footer>
-        <p>&copy; ২০২৫ Imagination Hub. সর্বস্বত্ব সংরক্ষিত।</p>
+        &copy; ২০২৫ Imagination Hub. সর্বস্বত্ব সংরক্ষিত।
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
