@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let hamburger = document.getElementById("hamburgerMenu");
     let dropdown = document.getElementById("dropdownMenu");
 
-    // ☰ Click Opens & Closes Dropdown
+    // ☰ Click Opens & Closes Dropdown everywhere
     hamburger.addEventListener("click", function (event) {
         event.stopPropagation();
         dropdown.classList.toggle("show");
@@ -10,14 +10,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Clicking Outside Closes ☰ Menu
     document.addEventListener("click", function (event) {
-        if (!dropdown.contains(event.target) && !hamburger.contains(event.target)) {
+        if (
+            dropdown.classList.contains("show") &&
+            !dropdown.contains(event.target) &&
+            !hamburger.contains(event.target)
+        ) {
             dropdown.classList.remove("show");
         }
     });
 
-    // Close menu on window resize to ensure proper state
-    window.addEventListener("resize", function () {
-        if (window.innerWidth > 768) {
+    // Optional: Esc key closes menu
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
             dropdown.classList.remove("show");
         }
     });
