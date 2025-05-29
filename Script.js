@@ -1,24 +1,44 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let hamburger = document.getElementById("hamburgerMenu");
-    let dropdown = document.getElementById("dropdownMenu");
+    // Get references to hamburger and dropdown
+    const hamburger = document.getElementById("hamburgerMenu");
+    const dropdown = document.getElementById("dropdownMenu");
 
-    // ☰ Click Opens & Closes Dropdown
+    // Hide dropdown to start
+    dropdown.style.display = "none";
+
+    // Hamburger click: toggle dropdown
     hamburger.addEventListener("click", function (event) {
         event.stopPropagation();
-        dropdown.classList.toggle("show");
-    });
-
-    // Clicking Outside Closes ☰ Menu
-    document.addEventListener("click", function (event) {
-        if (!dropdown.contains(event.target) && !hamburger.contains(event.target)) {
-            dropdown.classList.remove("show");
+        // Toggle dropdown
+        if (dropdown.style.display === "none" || dropdown.style.display === "") {
+            dropdown.style.display = "flex";
+        } else {
+            dropdown.style.display = "none";
         }
     });
 
-    // Close menu on window resize to ensure proper state
+    // Click outside: close dropdown
+    document.addEventListener("click", function (event) {
+        if (
+            dropdown.style.display === "flex" &&
+            !dropdown.contains(event.target) &&
+            !hamburger.contains(event.target)
+        ) {
+            dropdown.style.display = "none";
+        }
+    });
+
+    // On window resize: close dropdown if width > 768px (optional)
     window.addEventListener("resize", function () {
         if (window.innerWidth > 768) {
-            dropdown.classList.remove("show");
+            dropdown.style.display = "none";
+        }
+    });
+
+    // Esc key closes dropdown
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            dropdown.style.display = "none";
         }
     });
 });
